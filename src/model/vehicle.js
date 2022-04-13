@@ -6,7 +6,7 @@ const vehicleSchema = mongoose.Schema({
     horsepower: {type: String, required: false},
     make: {type: String, required: true},
     model: {type: String, required: true},
-    price: {type: String, required: true},
+    price: {type: String, required: false},
     img_url: {type: String, required: true}
 });
 

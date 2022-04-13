@@ -5,4 +5,6 @@ const vehicleController = require('./vehiclecontroller.js');
 
 route.get('/', vehicleController.getAllVehicles);
 
+route.post('/', vehicleController.registerVehicle);
+
 module.exports = route;
