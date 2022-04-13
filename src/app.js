@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
+// import routes
+const vehicleRoutes = require('./vehicleroutes.js');
+
 const connectionString = "mongodb+srv://wuletaw:NwlKrS9Li7ovO1S4@cluster0.buyq6.mongodb.net/vehiclesdb";
 
 mongoose.connect(connectionString).then(() => {
@@ -25,6 +28,8 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+app.use('/vehicle', vehicleRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello there');
