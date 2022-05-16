@@ -33,48 +33,6 @@ http code 404
 }
 ```
 
-## Login
-**You send:**  Your  login credentials.
-**You get:** An `API-Token` with wich you can make further actions.
-
-**Register a Vehicle:**
-```json
-POST /login HTTP/1.1
-Accept: application/json
-Content-Type: application/json
-Content-Length: xy
-
-{
-  "year": 2016,
-  "horsepower": 252,
-  "make": "audi",
-  "model": "a6",
-  "price": 52100.0,
-  "img_url": "http://ts2.mm.bing.net/th?id=OIP.M87f9a7ad73341027ed0eb94569f2425eH0&pid=15.1"
-}
-```
-**Successful Response:**
-```json
-HTTP/1.1 200 OK
-Server: My RESTful API
-Content-Type: application/json
-Content-Length: xy
-
-{
-	"message": "Vehicle registered successfully",
-	"data": {
-		"_id": "6256d935f84da6f726634197",
-		"year": "2016",
-		"horsepower": "252",
-		"make": "audi",
-		"model": "a6",
-		"price": "52100",
-		"img_url": "http://ts2.mm.bing.net/th?id=OIP.M87f9a7ad73341027ed0eb94569f2425eH0&pid=15.1",
-		"__v": 0
-	}
-}
-```
-
 ## Author
 
 👤 **Wuletaw Wonte**
